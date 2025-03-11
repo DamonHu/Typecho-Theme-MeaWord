@@ -72,7 +72,7 @@ $this->need('common/header.php');
                 <?php endwhile; ?>                     
             </div>
             <?php if($this->options->needAjaxScroll):?>
-            <div class="no-more"><?php _e('没有更多了'); ?>~</div>
+            <div class="no-more"><?php _e('End of the page'); ?>~</div>
             <div id="spinner1" class="spinner">
                 <div class="spinner-grow" role="status">
                     <span class="visually-hidden"></span>

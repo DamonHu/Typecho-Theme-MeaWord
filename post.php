@@ -24,7 +24,7 @@ $this->need('common/header.php');
                 <?php $this->content(); ?>
 			</article>
             <div class="post_tag">           
-                 <div class="mt-4"><i class="iconfont icon-tags"></i><?php $this->tags('', true, '<span>暂无标签</span>'); ?></div>
+                 <div class="mt-4"><i class="iconfont icon-tags"></i><?php $this->tags('', true, '<span>No tag</span>'); ?></div>
             </div>
             <div class="post-next-prev row">
                 <?php theNextPrev($this); ?>
