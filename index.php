@@ -16,7 +16,7 @@ $this->need('common/header.php');
     <div class="container">
         <div class="post-box">
             <div class="post-box-txt">
-                <h3 class="latest_post">最新文章</h3>
+                <h3 class="latest_post"><?php _e('最新文章'); ?></h3>
             </div>
             <div class="post_loop">
                 <?php while($this->next()): ?>
@@ -72,7 +72,7 @@ $this->need('common/header.php');
                 <?php endwhile; ?>                     
             </div>
             <?php if($this->options->needAjaxScroll):?>
-            <div class="no-more">没有更多了~</div>
+            <div class="no-more"><?php _e('没有更多了'); ?>~</div>
             <div id="spinner1" class="spinner">
                 <div class="spinner-grow" role="status">
                     <span class="visually-hidden"></span>

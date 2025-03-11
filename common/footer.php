@@ -17,7 +17,7 @@
         </div>
         <div class="sidebar_box" style="height: calc(100vh - 127px);">
             <aside id="nav_menu-2" class="widget widget_nav_menu">
-                <h3 class="widget-title">分类</h3>
+                <h3 class="widget-title"><?php _e('分类'); ?></h3>
                 <div class="menu-category-container">
                     <ul class="menu">
                         <?php $this->widget('Widget_Metas_Category_List')->to($categorys); ?>
@@ -31,7 +31,7 @@
                 </div>
             </aside>
             <aside id="nav_menu-2" class="widget widget_nav_menu">
-                <h3 class="widget-title">页面</h3>
+                <h3 class="widget-title"><?php _e('页面'); ?></h3>
                 <div class="menu-page-container">
                     <ul class="menu">
                         <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
@@ -44,7 +44,7 @@
         </div>
     </div>
 </div>
-<button class="scrollToTopBtn" title="返回顶部"><i class="bi bi-chevron-up"></i></button>
+<button class="scrollToTopBtn" title="<?php _e('返回顶部'); ?>"><i class="bi bi-chevron-up"></i></button>
 <script>
   const isDark= localStorage.getItem("isDarkMode");
   if(isDark==="1"){

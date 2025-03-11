@@ -11,11 +11,11 @@ $this->need('common/header.php');
     <div class="container">
         <div class="post-box">
 	    	<div class="post-box-txt">
-                <h3 class="latest_post">归档</h3>
+                <h3 class="latest_post"><?php _e('归档'); ?></h3>
             </div>
             <?php $this->widget("Widget_Metas_Tag_Cloud", "sort=mid&ignoreZeroCount=1&desc=0")->to($tags);
             if ($tags->have()): ?>
-            <div id="tags" class="mod-archive-name">标签</div>
+            <div id="tags" class="mod-archive-name"><?php _e('标签'); ?></div>
             <ul class="mod-archive-list">
                 <?php while ($tags->next()): ?>
                     <li class="li-inline">
@@ -28,7 +28,7 @@ $this->need('common/header.php');
             <?php endif;?>
             <?php $this->widget("Widget_Metas_Category_List")->to($categories); ?>
             <?php if ($categories->have()): ?>
-            <div id="category" class="mod-archive-name">分类</div>   
+            <div id="category" class="mod-archive-name"><?php _e('分类'); ?></div>   
             <ul class="mod-archive-list">
                 <?php while ($categories->next()): ?>
                     <li class="li-inline">
