@@ -2,12 +2,12 @@
 
 <div class="post-comment">
     <?php $this->comments()->to($comments); ?>
-    <h3 class="post_about_author">评论<small>(<?php $this->commentsNum();?>)</small></h3>
+    <h3 class="post_about_author"><?php _e('评论'); ?><small>(<?php $this->commentsNum();?>)</small></h3>
     <div id="comments" class="comments-area mb-5">
         <div class="layoutSingleColumn">
         <?php if($this->allow('comment')): ?>
             <div id="<?php $this->respondId(); ?>" class="respond">
-            	<div id="response">发布评论</div>
+            	<div id="response"><?php _e('提交评论'); ?></div>
                 <div class="cancel-comment-reply">
                 <?php $comments->cancelReply(); ?>
                 </div>
@@ -32,7 +32,7 @@
                         <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
                     </div>
                     <div class="reply-submit">
-            		    <button type="submit" class="submit"><?php _e('发布评论'); ?></button>
+            		    <button type="submit" class="submit"><?php _e('提交评论'); ?></button>
                     </div>
             	</form>
             </div>
