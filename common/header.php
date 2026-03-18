@@ -11,6 +11,7 @@
 <meta name="format-detection" content="email=no">
 <meta name="format-detection" content="address=no">
 <meta name="format-detection" content="date=no">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
