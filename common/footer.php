@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="container">
-        <h3><?php $this->options->description() ?></h3>
+        <!-- <h3><?php $this->options->description() ?></h3> -->
         <p>©️ <?php echo $this->options->startYear?$this->options->startYear.' - ':''; ?> <?php echo  date("Y")?> <?php $this->options->title(); ?>. Designed by <a href="https://www.bawge.com/" target="_blank">Meayair</a>
         </p>
         <?php if($this->options->beianNum):?>
@@ -15,7 +15,8 @@
             <button type="button" class="theme-switch" onclick="switchDarkMode()"><i style="font-size: 18px;margin-right: 20px;" class="bi bi-lightbulb-fill"></i></button>
             <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x"></i></button>
         </div>
-        <div class="sidebar_box" style="height: calc(100vh - 127px);">
+        <!-- <div class="sidebar_box" style="height: calc(100vh - 127px);"> -->
+            <div class="sidebar_box">
             <aside id="nav_menu-2" class="widget widget_nav_menu">
                 <h3 class="widget-title"><?php _e('分类'); ?></h3>
                 <div class="menu-category-container">
@@ -24,7 +25,18 @@
                         <?php while($categorys->next()): ?>
                         <?php if ($categorys->levels === 0): ?>
                         <?php $children = $categorys->getAllChildren($categorys->mid); ?>
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-<?php $categorys->mid(); ?>"><a href="<?php $categorys->permalink(); ?>"><?php $categorys->name(); ?></a></li>
+                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-<?php $categorys->mid(); ?>"><a href="<?php $categorys->permalink(); ?>"><?php $categorys->name(); ?></a></li>
+                            <?php
+                $children = $categorys->getAllChildren($categorys->mid);
+                if ($children) {
+                    foreach ($children as $child) {
+                        // 需要新建一个Category对象来获取子分类信息
+                        $childCategory = $categorys->getCategory($child);
+                        echo '<li class="menu-item"><a href="' . $childCategory['permalink'] . '">' . $childCategory['name'] . '</a></li>';
+                    }
+                }
+            ?>
+
                         <?php endif; ?>
                         <?php endwhile; ?>
                     </ul>

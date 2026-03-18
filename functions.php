@@ -203,7 +203,7 @@ function getNextPrev($mode, $archive, $fields_name = ''){
         }
 
         $content = $db->fetchRow($query);
-        if ($content) {
+        if ($content and is_array($content) and array_key_exists('str_value', $content)) {
             $fields = $content['str_value'];
         }
 

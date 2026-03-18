@@ -13,7 +13,7 @@ $this->need('common/header.php');
 	    	<div class="post-box-txt">
                 <h3 class="latest_post"><?php _e('归档'); ?></h3>
             </div>
-            <?php $this->widget("Widget_Metas_Tag_Cloud", "sort=mid&ignoreZeroCount=1&desc=0")->to($tags);
+            <!-- <?php $this->widget("Widget_Metas_Tag_Cloud", "sort=mid&ignoreZeroCount=1&desc=0")->to($tags);
             if ($tags->have()): ?>
             <div id="tags" class="mod-archive-name"><?php _e('标签'); ?></div>
             <ul class="mod-archive-list">
@@ -25,13 +25,13 @@ $this->need('common/header.php');
                     </li>
                 <?php endwhile; ?>
             </ul>
-            <?php endif;?>
+            <?php endif;?> -->
             <?php $this->widget("Widget_Metas_Category_List")->to($categories); ?>
             <?php if ($categories->have()): ?>
             <div id="category" class="mod-archive-name"><?php _e('分类'); ?></div>   
-            <ul class="mod-archive-list">
+            <ul class="mod-archive-list" style="display: flex;flex-wrap: wrap;gap: 10px;justify-content: space-between;">
                 <?php while ($categories->next()): ?>
-                    <li class="li-inline">
+                    <li style="width: 23%;">
                         <a href="<?php $categories->permalink(); ?>" rel="category" title="<?php $categories->name(); ?>">
                             <?php $categories->name(); ?><span>(<?php $categories->count(); ?>)</span>
                         </a>
