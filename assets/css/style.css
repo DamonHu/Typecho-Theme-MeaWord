@@ -637,6 +637,17 @@ img {
     left: calc(50% - 25px);
 }
 
+.category-desc {
+    text-align: center;
+    position: relative;
+    border: 2px solid #e0e0e0;
+    padding: 25px 30px 25px 30px;
+    box-shadow: 5px 5px #e0e0e0;
+    color: #888;
+    font-size: 14px;
+    margin-top: -20px;
+}
+
 .post-box .post-box-txt p {
     line-height: 1.8;
     color: #666;
