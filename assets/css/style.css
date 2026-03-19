@@ -272,7 +272,6 @@ img {
 }
 
 .head_top .logo img {
-    height: 30px;
     margin-right: 12px;
     height: 85px;
     border-radius: 50%;
@@ -430,6 +429,12 @@ img {
     }
 }
 
+@media (max-width:1024px) {
+    .head_top .logo b {
+        font-size: 40px;
+    }
+}
+
 /*index banner left*/
 #banner {
     background: var(--bs-main);
@@ -583,8 +588,12 @@ img {
         display: none;
     }
 
+    .head_top .logo img {
+        height: 75px;
+    }
+
     .head_top .logo b {
-        font-size: 36px;
+        font-size: 30px;
     }
 }
 
