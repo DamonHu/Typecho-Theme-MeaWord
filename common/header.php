@@ -21,13 +21,12 @@
 <meta name='robots' content='max-image-preview:large' />
 <link rel='stylesheet' id='bootstrap-css' href='<?php $this->options->themeUrl('assets/css/bootstrap.min.css'); ?>' type='text/css' media='all' />
 <link rel='stylesheet' id='bifont-css' href='<?php $this->options->themeUrl('assets/css/bootstrap-icons.css'); ?>' type='text/css' media='all' />
-<link rel='stylesheet' id='stylecss-css' href='<?php $this->options->themeUrl('assets/css/style.css?ver=2.0.1.16'); ?>' type='text/css' media='all' />
+<link rel='stylesheet' id='stylecss-css' href='<?php $this->options->themeUrl('assets/css/style.css?ver=2.0.1.17'); ?>' type='text/css' media='all' />
 <link rel='stylesheet' id='stylecss-css' href='<?php $this->options->themeUrl('assets/css/comments.css?ver=2.0.1.2'); ?>' type='text/css' media='all' />
 <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/jquery.min.js'); ?>" id="jquery-min-js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-swift.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+<script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/prism.js'); ?>" id="prism-js"></script>
+<link rel='stylesheet' id='prism-css' href='<?php $this->options->themeUrl('assets/css/prism.css'); ?>' type='text/css' media='all' />
 
 <?php echo $this->options->statistics?:''; ?>
 <?php $this->header(); ?>
